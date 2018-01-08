@@ -1,0 +1,26 @@
+/*
+create layout using css grid to match the #roof background image
+
+https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid-template-columns-rows
+ */
+
+#root {
+  background: url("http://res.cloudinary.com/jastuccio/image/upload/c_scale,w_986/v1515440430/credit-card.jpg") no-repeat;
+  display: grid;
+  height: 100vh;
+  filter: opacity(20%);
+}
+
+/* fluid aspect ratio
+https://css-tricks.com/fun-viewport-units/#article-header-id-3
+*/
+
+/* max-width * aspect-ratio */
+.credit-card {
+  font-size: 4rem;
+  /* color: white; */
+  width: 100vw;
+  max-width: 30em;
+  height: calc(100vw * (9/16));
+  max-height: calc(30em * (9/16));
+}
